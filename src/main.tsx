@@ -1,34 +1,22 @@
 import { createRoot } from "react-dom/client";
-// import ReactDOM from "react-dom/client"
-
-// ReactDOM.createRoot(document.querySelector("#root")).render(<p>Hello from the world of React!</p>)
-// createRoot(document.querySelector("#root")).render(<p>Hello from the world of React!</p>)
+import { MyAwesomeNavbar } from "./components/navbar";
 const root = createRoot(document.getElementById("root"));
 
-const reactElement = (
-  <ul>
-    <li>Super popular JS library</li>
-    <li>Will help me be even more employable</li>
-    <li>How widely it’s used in real-world products</li>
-  </ul>
+export function MainContent() {
+  return <h1>React is great!</h1>;
+}
+/**
+ * Challenge:
+ * Create your very first custom React component!
+ * Call it "MainContent", and have it return a simple
+ * h1 element that says "React is great!"
+ *
+ * Afterward, render it on the line below MyAwesomeNavbar
+ */
+
+root.render(
+  <div>
+    <MyAwesomeNavbar />
+    <MainContent />
+  </div>,
 );
-
-console.log(reactElement);
-
-root.render(reactElement);
-////Components and JSX are ultimately transformed into JavaScript objects that React interprets to build the user interface.
-
-// This is how React elements were created in the early days, before JSX became the standard way of writing components:
-
-// import { createElement } from "react"
-// import { createRoot } from "react-dom/client"
-
-// const root = createRoot(document.getElementById("root"))
-// const reactElement = createElement("h1", null, "Hello from createElement!") //Null is the prop
-
-// console.log(reactElement)
-//the console shows this: {type: 'h1', key: null, props: {children: 'Hello from createElement!'}, _owner: null, _store: {}}
-
-// root.render(
-//     reactElement
-// )
