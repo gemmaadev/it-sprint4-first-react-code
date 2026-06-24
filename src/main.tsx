@@ -48,29 +48,30 @@ root.render(
   </div>,
 );
 
-// import { createRoot } from "react-dom/client"
-// const root = createRoot(document.getElementById("root"))
+ 
+//QUIZ
 
-// function Page() {
+// 1. What is a React component?
+// A function that returns React elements. (UI)
+
+// 2. What's wrong with this code?
+// ```
+// function myComponent() {  >>>>>  MyComponent()
 //     return (
-//         <div>
-//             <header>
-//                 <img src="react-logo.png" width="40px" alt="React logo" />
-//             </header>
-//             <main>
-//                 <h1>Reason I am excited to learn React</h1>
-//                 <ol>
-//                     <li>React is a popular library, so I will be able to fit in with all the coolest devs out there! 😎</li>
-//                     <li>I am more likely to get a job as a front end developer if I know React</li>
-//                 </ol>
-//             </main>
-//             <footer>
-//                 <small>© 2024 Ziroll development. All rights reserved.</small>
-//             </footer>
-//         </div>
+//         <small>I'm tiny text!</small>
+//     )
+// }
+// ```
+
+// 3. What's wrong with this code?
+// ```
+// function Header() {
+//     return (
+//         <header>
+//             <img src="./react-logo.png" width="40px" alt="React logo" />
+//         </header>
 //     )
 // }
 
-// root.render(
-//     <Page />
-// )
+// root.render(Header())  >>>>>  <Header />
+// ```
