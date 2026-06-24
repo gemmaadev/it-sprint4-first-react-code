@@ -6,14 +6,6 @@ const root = createRoot(document.getElementById("root"));
 export function MainContent() {
   return <h1>React is great!</h1>;
 }
-/**
- * Challenge:
- * Create your very first custom React component!
- * Call it "MainContent", and have it return a simple
- * h1 element that says "React is great!"
- *
- * Afterward, render it on the line below MyAwesomeNavbar
- */
 
 root.render(
   <div>
@@ -22,27 +14,34 @@ root.render(
   </div>,
 );
 
- 
+/*
+Challenge: Starting from scratch, build and render the 
+HTML for our section project. Check the Google slide for 
+what you're trying to build.
 
-/* 
-Challenge - recreate the above line of code in vanilla JS by creating and
-appending an h1 to our div#root (without using innerHTML).
+We'll be adding more styling to it later.
 
-- Create a new h1 element (createElement)
-- Give it some textContent
-- Give it a class name of "header"
-- append it as a child (using `appendChild`) of the div#root
+Hints:
+* The React logo is a file in the project tree, so you can
+  access it by using `src="react-logo.png"` in your image
+  element
+* You can also set the `width` attribute of the image element
+  just like in HTML. In the slide, I have it set to 40px
+ */
 
-Don't use innerHTML to accomplish any of this.
-    
-// */
+// import { createRoot } from "react-dom/client"
+// const root = createRoot(document.getElementById("root"))
+
 // root.render(
-//     <h1 className="header">Hello, React!</h1>
+//     <main>
+//         <img src="react-logo.png" width="40px" alt="React logo" />
+//         <h1>Fun facts about React!</h1>
+//         <ul>
+//             <li>Was first release in 2013</li>
+//             <li>Was originally created by Jordan Walke</li>
+//             <li>Has well over 200K stars on GitHub</li>
+//             <li>Is maintained by Meta</li>
+//             <li>Powers thousands of enterprise apps, including mobile apps</li>
+//         </ul> 
+//     </main>
 // )
-
-// const h1 = document.createElement("h1")
-// h1.textContent = "This is imperative coding"
-// h1.className = "header"
-// document.getElementById("root").appendChild(h1) 
-
-//THIS IS IMPERATIVE "How should it be done, step by step"
