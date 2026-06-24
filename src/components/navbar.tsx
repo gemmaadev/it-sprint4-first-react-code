@@ -5,9 +5,9 @@ export function MyAwesomeNavbar() {
       aria-label="Third navbar example"
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          MyAwesomeNavbar
-        </a>
+        <a className="navbar-brand me-4" href="#">
+          <img src="src/assets/react-logo.png" width="40px" alt="React logo" />
+        </a>{" "}
         <button
           className="navbar-toggler"
           type="button"
@@ -19,7 +19,6 @@ export function MyAwesomeNavbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
         <div className="collapse navbar-collapse" id="navbarsExample03">
           <ul className="navbar-nav me-auto mb-2 mb-sm-0">
             <li className="nav-item">
