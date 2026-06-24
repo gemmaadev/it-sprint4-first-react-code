@@ -1,27 +1,14 @@
 import { createRoot } from "react-dom/client";
-import Navbar from "./components/Navbar";
-import MainContent from "./components/MainContent";
-import SecondaryContent from "./components/MainContent";
-import Footer from "./components/Footer";
+import App from "./App";
 
-const root = createRoot(document.getElementById("root"));
+// Aquest fitxer és el punt d'entrada de tota l'aplicació.
+// És on React "s'enganxa" a la pàgina HTML real.
 
-/**
- * Challenge: move the MainContent and Footer components to their own
- * separate files.
- */
+// Busquem l'element <div id="root"> que hi ha a index.html.
+// El "!" li diu a TypeScript: "estic segur que aquest element existeix".
+const root = createRoot(document.getElementById("root")!);
 
-export function Page() {
-  return (
-    <div className="page-layout">
-      <Navbar />
-      <div className="main-container">
-        <MainContent />
-        <SecondaryContent />
-      </div>
-      <Footer />
-    </div>
-  );
-}
-
-root.render(<Page />);
+// Aquí li diem a React que dibuixi (renderitzi) el component <App />
+// dins d'aquell element "root". A partir d'aquí, tota la pàgina
+// es controla des de React.
+root.render(<App />);
