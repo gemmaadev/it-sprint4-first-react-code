@@ -16,6 +16,52 @@
 
   <body>
     <div id="root"></div>
+    <!-- FRAGMENTS benefits: Cleaner DOM: Unlike a <div>, a fragment does not create an extra HTML element in the DOM tree.
+      Better Styling and Layout: Extra div tags can break CSS layouts (like flexbox or grid) or invalid HTML 
+      (e.g., placing a div directly inside a <table> instead of a <tr> or <td>). -->
+
+    <!-- WITH FRAGMENTS -->
+    <!-- <div id="root">
+      <header>
+        <img src="react-logo.png" width="40px" alt="React logo" />
+      </header>
+      <main>
+        <h1>Reason I am excited to learn React</h1>
+        <ol>
+          <li>
+            React is a popular library, so I will be able to fit in with all the
+            coolest devs out there! 😎
+          </li>
+          <li>
+            I am more likely to get a job as a front end developer if I know
+            React
+          </li>
+        </ol>
+      </main>
+      <footer>
+        <small>© 2024 Ziroll development. All rights reserved.</small>
+      </footer>
+    </div> -->
+
+    <!-- 
+    WITHOUT FRAGMENTS
+    <div id="root">
+		<div>
+			<header>
+				<img src="react-logo.png" width="40px" alt="React logo" />
+			</header>
+			<main>
+				<h1>Reason I am excited to learn React</h1>
+				<ol>
+					<li>React is a popular library, so I will be able to fit in with all the coolest devs out there! 😎</li>
+					<li>I am more likely to get a job as a front end developer if I know React</li>
+				</ol>
+			</main>
+			<footer>
+				<small>© 2024 Ziroll development. All rights reserved.</small>
+			</footer>
+		</div> -->
+
     <script src="/src/main.tsx" type="module"></script>
   </body>
 </html>
