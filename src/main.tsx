@@ -4,49 +4,65 @@ import { MyAwesomeNavbar } from "./components/navbar";
 const root = createRoot(document.getElementById("root"));
 
 export function MainContent() {
-  return <h1>React is great!</h1>;
+  return (
+    <main>
+      <img src="src/assets/react-logo.png" width="40px" alt="React logo" />
+      <h1>Fun facts about React!</h1>
+      <ul>
+        <li>Was first release in 2013</li>
+        <li>Was originally created by Jordan Walke</li>
+        <li>Has well over 200K stars on GitHub</li>
+        <li>Is maintained by Meta</li>
+        <li>Powers thousands of enterprise apps, including mobile apps</li>
+      </ul>
+    </main>
+  );
+}
+
+/**
+ * Challenge (part 1):
+ * Create a custom "Page" component
+ *
+ * It should return an ordered list with the reasons why you're
+ * excited to be learning React :)
+ *
+ * Render the Page component.
+ */
+
+export function SecondaryContent() {
+  return (
+    <section>
+      <h1>Why I am excited to be learning React?</h1>
+      <ol>
+        <li>Super popular JS library</li>
+        <li>Will help me be even more employable</li>
+        <li>How widely it’s used in real-world products</li>
+      </ol>
+    </section>
+  );
 }
 
 root.render(
   <div>
     <MyAwesomeNavbar />
     <MainContent />
+    <SecondaryContent />
   </div>,
 );
 
-// 1. Where does React put all of the elements I create in JSX when I
-//    call `root.render()`?
+//  import { createRoot } from "react-dom/client"
+// const root = createRoot(document.getElementById("root"))
 
-// All the elements I render get put inside the div with the id of "root"
-// (or whatever other element I might select when calling createRoot)
-
-// 2. What would show up in my console if I were to run this line of code:
-// ```
-// console.log(<h1>Hello world!</h1>)
-// ```
-// An object! Unlike creating an HTML element in vanilla DOM JS, what
-// gets created from the JSX we have in our React code is a plain JS object
-// that React will use to fill in the view.
-
-// 3. What's wrong with this code:
-// ```
 // root.render(
-//     <section>
-//         <h1>Hi there</h1>
-//         <p>This is my website!</p>
-//     </section>
+//     <main>
+//         <img src="react-logo.png" width="40px" alt="React logo" />
+//         <h1>Fun facts about React!</h1>
+//         <ul>
+//             <li>Was first release in 2013</li>
+//             <li>Was originally created by Jordan Walke</li>
+//             <li>Has well over 200K stars on GitHub</li>
+//             <li>Is maintained by Meta</li>
+//             <li>Powers thousands of enterprise apps, including mobile apps</li>
+//         </ul>
+//     </main>
 // )
-// ```
-// You can only render 1 parent element at a time. That parent element can have
-// as many children elements as you want.
-
-// 4. What does it mean for something to be "declarative" instead of "imperative"?
-// *Imperative* means we need to give specific step-by-step instructions on how to
-// accomplish a task.
-// *Declarative* means we can write our code to simply "describe" *what* should show up
-// on the page and allow the rool (React, e.g.) to handle the details on *how* to
-// put those things on the page.
-
-// 5. What does it mean for something to be "composable"?
-// We have small pieces that we can put together to make something
-// larger or greater than the individual pieces themselves.
