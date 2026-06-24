@@ -5,10 +5,10 @@ const root = createRoot(document.getElementById("root"));
 
 export function MainContent() {
   return (
-    <main>
-      <h1>Fun facts about React!</h1>
-      <ul>
-        <li>Was first release in 2013</li>
+    <main className="content-card">
+      <h1 className="card-title-react">Fun facts about React!</h1>
+      <ul className="facts-list">
+        <li>Was first released in 2013</li>
         <li>Was originally created by Jordan Walke</li>
         <li>Has well over 200K stars on GitHub</li>
         <li>Is maintained by Meta</li>
@@ -20,9 +20,11 @@ export function MainContent() {
 
 export function SecondaryContent() {
   return (
-    <section>
-      <h2>Why I am excited to be learning React?</h2>
-      <ol>
+    <section className="content-card">
+      <h2 className="card-title-react">
+        Why I am excited to be learning React?
+      </h2>
+      <ol className="facts-list">
         <li>Super popular JS library</li>
         <li>Will help me be even more employable</li>
         <li>How widely it’s used in real-world products</li>
@@ -33,20 +35,23 @@ export function SecondaryContent() {
 
 export function Footer() {
   return (
-    <footer>
+    <footer className="main-footer">
       <small>© 2026 Maeso development. All rights reserved.</small>
+      <small className="footer-sub">Built with React</small>
     </footer>
   );
 }
 
 export function Page() {
   return (
-    <>
+    <div className="page-layout">
       <MyAwesomeNavbar />
-      <MainContent />
-      <SecondaryContent />
+      <div className="main-container">
+        <MainContent />
+        <SecondaryContent />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
